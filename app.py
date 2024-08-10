@@ -29,7 +29,8 @@ def get_gpt_api_response(request_method, request_path, request_args, request_coo
         messages=[
             {"role": "system", "content": pre_prompt},
             {"role": "user", "content": data_string}
-        ]
+        ],
+        temperature=1
     )
 
     return parse_api_response(completion.choices[0].message.content)
