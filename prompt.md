@@ -24,7 +24,9 @@ You should return a response in the following format:
 Requests prefixed with /api/ should return a JSON response, all other requests should return HTML.
 HTML pages should link to CSS and JS files, and should be styled with CSS.
 They should also link to other pages, and use javascript with api endpoints if necessary
-Use bootstrap to make the pages look nice
+Use bootstrap to make the pages look nice.
+
+Make sure any content that is not immediately accessible is either fetched from /api/xxx or redirects to another page
 
 
 $$$ BEGIN JSON $$$
