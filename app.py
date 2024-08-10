@@ -58,16 +58,6 @@ def parse_api_response(response_text):
         return None
 
 
-
-
-completion = client.chat.completions.create(
-  model="gpt-4o-mini",
-  messages=[
-    {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
-  ]
-)
-
-
 @app.route('/', defaults={'path': ''}, methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
 def catch_all(path):
@@ -90,12 +80,5 @@ def catch_all(path):
     return completion, status_code, {'Content-Type': content_type}
 
 
-
-
-
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-print(completion.choices[0].message)
