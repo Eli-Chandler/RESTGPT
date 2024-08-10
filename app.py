@@ -78,7 +78,7 @@ def catch_all(path):
     content_type = completion.get('content_type', 'application/json')
     status_code = completion.get('status_code', 200)
 
-    return completion, status_code, {'Content-Type': content_type}
+    return completion["body"], status_code, {'Content-Type': content_type}
 
 
 if __name__ == '__main__':
